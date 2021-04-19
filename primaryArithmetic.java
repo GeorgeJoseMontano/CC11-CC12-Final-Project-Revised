@@ -1,7 +1,8 @@
 import java.util.Scanner;
 
-public class primaryArithmetic {
-	//Create 3 stacks. Two for the two numbers and a third for their sum
+public class primaryArithmetic 
+{
+		//Create 3 stacks. Two for the two numbers and a third for their sum
 		static OurListStack stack1 = new OurListStack();
 		static OurListStack stack2 = new OurListStack();
 		
@@ -9,14 +10,18 @@ public class primaryArithmetic {
 	    {
 			Scanner input= new Scanner(System.in);
 			
+			//INPUT
+	      	System.out.println("Input:");
+	      	
 			//Get number of test cases
-			int T = input.nextInt();									
+			int T = input.nextInt();
+			input.nextLine();
 			
 			//Input arrays
 			String[] num1 = new String[T];								
 			String[] num2 = new String[T];								
 			
-			//Input
+			//Input numbers
 			for(int i = 0; i < T; i++)
 			{										
 				num1[i] = input.next();
@@ -24,7 +29,8 @@ public class primaryArithmetic {
 			}
 			input.close();
 			
-			//Output
+			//OUTPUT
+			System.out.println("Output: ");
 			for(int i = 0; i < T; i++)
 			{										
 				System.out.print("Case #" + (i + 1) + ": ");

@@ -7,6 +7,8 @@ public class parityProperty
 		Scanner input = new Scanner(System.in);						
 		int R,r,c;
 		
+		//INPUT
+		System.out.println("Input: ");
 		//Get number of test cases
 		int T = input.nextInt();									
 		
@@ -14,7 +16,7 @@ public class parityProperty
 		boolean [] zeta = new boolean[T];									
 
 		//Input
-		for(int i=0;i<T;i++)
+		for(int i = 0; i < T; i++)
 		{											
 			//Input for matrix dimensions
 			R= input.nextInt();
@@ -22,9 +24,9 @@ public class parityProperty
 			//Declare temporary matrix. This value will be passed to zeta[i] and will hold a new one
 			int[][] A = new int [R][R];								
 			
-			for(r=0;r<R;r++)
+			for(r = 0; r < R; r++)
 			{
-				for(c=0;c<R;c++)
+				for(c = 0; c < R; c++)
 				{
 					//Input for matrix elements
 					A[r][c]=input.nextInt();						
@@ -43,10 +45,11 @@ public class parityProperty
 		}
 		input.close();
 		
-		//Output
-		for(int i=0;i<T;i++)
+		//OUTPUT
+		System.out.println("Output: ");
+		for(int i = 0; i < T; i++)
 		{										
-			System.out.print("Case #"+(i+1)+": ");
+			System.out.print("Case #" + ( i + 1) + ": ");
 			//Checks value returned by method to determine if OK or NOT OK
 			if(zeta[i])
 			{											

@@ -33,40 +33,53 @@ public class reverseWords
 {
 	public static void main(String args[])
 	{	
-		Scanner input = new Scanner(System.in);				//Declare scanner
-		int T = input.nextInt();							//Get number of test cases
-		input.nextLine();
-		String[] str=new String[T];							//Declaration of variable string array that will accept inputs
+		Scanner input = new Scanner(System.in);				
 		
+		//INPUT
+		System.out.println("Input: ");
+		
+		//Get number of test cases
+		int T = input.nextInt();							
+		input.nextLine();
+		
+		//String array that will accept inputs
+		String[] str=new String[T];							
+		
+		//Input string
 		for(int i=0;i<T;i++)
-		{													//Input
+		{													
 			str[i]=input.nextLine();
 		}
 		input.close();
 		
+		//OUTPUT
+		System.out.println("Output: ");
 		for(int i=0;i<T;i++)
-		{													//Output
+		{													
 			System.out.print("Case #"+(i+1)+": ");
-			splitter(str[i]);								//Call Method
+			splitter(str[i]);								
 		}
 	}
 
     static void splitter(String str)
     {    
-        OurListStackString stack = new OurListStackString();			//Create a stack called stack 
+      OurListStackString stack = new OurListStackString();			 
         
-        String[] arrOfStr = str.split(" ");					//split(" ") method will split a string in spaces' position and insert them into an array 
+      //split(" ") method will split a string in spaces' position and insert them into an array
+      String[] arrOfStr = str.split(" ");					 
         
-        for (String a : arrOfStr) 							//For-each loop
-        {
-        	stack.push(a);									//Each elements in array push into a stack
-        }
-        
-        while(!stack.isEmpty())								//Loop while the stack is not empty
-        {
-        	System.out.print(stack.pop()+ " ");				//Pop the string
-        }
-        System.out.println();
+      //For-each loop to push each array into a stack
+      for (String a : arrOfStr) 							
+      {
+    	  stack.push(a);									
+      }
+      
+      //Use a stack to reverse order of the string
+      while(!stack.isEmpty())								
+      {
+    	  System.out.print(stack.pop()+ " ");	
+      }
+      System.out.println();
         
        
     }

@@ -6,6 +6,8 @@ public class newProgrammingLanguage
 	{
 		Scanner input = new Scanner(System.in);						
 		
+		//INPUT
+		System.out.println("Input:");
 		//Get number of test cases
 		int T = input.nextInt();									
 		
@@ -19,7 +21,8 @@ public class newProgrammingLanguage
 		}
 		input.close();
 
-		//Output and Method Call
+		//OUTPUT and Method Call
+		System.out.println("Output: ");
 		for(int i = 0; i < T; i++)
 		{										
 			System.out.print("Case #" + (i + 1) + ": ");

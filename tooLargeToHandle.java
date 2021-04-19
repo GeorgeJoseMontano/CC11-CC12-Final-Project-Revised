@@ -10,7 +10,9 @@ public class tooLargeToHandle
 	public static void main(String args[])
     {
 		Scanner input= new Scanner(System.in);
-		
+		//INPUT
+      	System.out.println("Input:");
+      	
 		//Get number of test cases
 		int T = input.nextInt();									
 		
@@ -18,7 +20,7 @@ public class tooLargeToHandle
 		String[] num1 = new String[T];								
 		String[] num2 = new String[T];								
 		
-		//Input
+		//Input numbers as string
 		for(int i = 0; i < T; i++)
 		{										
 			num1[i] = input.next();
@@ -26,7 +28,8 @@ public class tooLargeToHandle
 		}
 		input.close();
 		
-		//Output
+		//OUTPUT
+		System.out.println("Output: ");
 		for(int i = 0; i < T; i++)
 		{										
 			System.out.print("Case #" + (i + 1) + ": ");

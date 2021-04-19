@@ -10,6 +10,9 @@ public class base16
 	{
 		Scanner input= new Scanner(System.in);
 		
+		//INPUT
+      	System.out.println("Input:");
+      	
 		//Get number of test cases
 		int T = input.nextInt();
 		input.nextLine();
@@ -18,7 +21,7 @@ public class base16
 		String[] hex1 = new String[T];
 		String[] hex2 = new String[T];
 		
-		//Input
+		//Input hexa
 		for(int i = 0; i < T; i++)
 		{										
 			hex1[i] = input.next();
@@ -26,7 +29,8 @@ public class base16
 		}
 		input.close();
 		
-		//Output
+		//OUTPUT
+		System.out.println("Output: ");
 		for(int i = 0; i < T; i++)
 		{
 			System.out.print("Case #" + (i + 1) + ": ");
