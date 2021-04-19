@@ -54,7 +54,7 @@ public class tooLargeToHandle
 		int carry = 0;
 		
 		//Loop while one stack is still not empty
-		while(!stack1.isEmpty() || !stack2.isEmpty())
+		do
 		{
 			int a, b, sum;
 			
@@ -90,7 +90,14 @@ public class tooLargeToHandle
 			{
 				carry = 0;
 			}
-		}
+			
+			//safety net in case the carry extends the max length of string example 99 + 1 = 100
+			if (stack1.isEmpty() && stack2.isEmpty() && carry == 1) 
+			{
+				stack3.push(1);
+			}
+			
+		}while(!stack1.isEmpty() || !stack2.isEmpty());
 	}
 	
 	//Method to print the sum of the two numbers
