@@ -7,6 +7,8 @@ public class minesweeper {
 		Scanner input = new Scanner(System.in);						
 		int r,c;
 		
+		
+		System.out.println("Input:");
 		//Get number of dimensions
 		int n = input.nextInt();
 		int m = input.nextInt();
@@ -36,6 +38,8 @@ public class minesweeper {
 			System.out.println(A[r]);
 		}*/
 		B = traverse(B,n,m);
+		
+		System.out.println("Output: ");
 		for(r = 0; r < n; r++)
 		{
 			for(c = 0; c < m; c++)

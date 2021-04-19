@@ -12,7 +12,7 @@
 	each line will not exceed 255.
 	
 	Output
-	For each test case, output one line containing â€œCase #x: â€ followed by the list of words in
+	For each test case, output one line containing “Case #x: ” followed by the list of words in
 	reverse order.
 	
 	Sample Input
@@ -53,7 +53,7 @@ public class reverseWords
 
     static void splitter(String str)
     {    
-        OurListStack stack = new OurListStack();			//Create a stack called stack 
+        OurListStackString stack = new OurListStackString();			//Create a stack called stack 
         
         String[] arrOfStr = str.split(" ");					//split(" ") method will split a string in spaces' position and insert them into an array 
         
