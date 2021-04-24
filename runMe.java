@@ -16,7 +16,10 @@ static Scanner input = new Scanner(System.in);
 		switch(type)
 		{
 			case "1":
-				//towersOfHanoi.main(null);	
+				JOptionPane.showMessageDialog(null,"Sample Input: \n"
+						+ "5");
+JOptionPane.showMessageDialog(null,"Input on Console");
+				towersOfHanoi.main(null);	
 				break;
 			case "2":
 				JOptionPane.showMessageDialog(null,"Sample Input:\n"
