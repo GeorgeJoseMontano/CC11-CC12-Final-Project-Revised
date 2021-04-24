@@ -8,25 +8,38 @@ class towersOfHanoi
 		
 		//INPUT
 		System.out.println("Input: ");
-		
 		int n = input.nextInt();							
 		input.close();
+		
+		//OUTPUT and call method
 		System.out.println("Output: ");
-		moveStacks(n, '1', '3', '2');  // A, B and C are names of rods
+		//char name of the rods
+		moveStacks(n, '1', '3', '2');
     }
-    // Java recursive function to solve tower of hanoi puzzle
-    static void moveStacks(int n, char from_rod, char to_rod, char aux_rod)
+	
+    //method to solve towers of hanoi
+    static void moveStacks(int n, char origin, char destination, char holder)
     {
         if (n == 1)
         {
-            System.out.println(from_rod + " --> " + to_rod);
+        	//pretty much step 2 below since if it's the final disk it is the base
+            System.out.println(origin + " --> " + destination);
             return;
         }
-        moveStacks(n-1, from_rod, aux_rod, to_rod);
-        System.out.println(from_rod + " --> " + to_rod);
-        moveStacks(n-1, aux_rod, to_rod, from_rod);
+        else
+        {
+        	//minus 1 disk
+        	n--;
+        	
+        	//steps to move all discs above the base disk to holder
+	        moveStacks(n, origin, holder, destination);
+	        
+	        //step to move base disk to destination
+	        System.out.println(origin + " --> " + destination);
+	        
+	        //steps to move all disks that were in holder to destination
+	        moveStacks(n, holder, destination, origin);
+        }
     }
-      
-    //  Driver method
-    
+
 }
