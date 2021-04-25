@@ -18,7 +18,7 @@ static Scanner input = new Scanner(System.in);
 			case "1":
 				JOptionPane.showMessageDialog(null,"Sample Input: \n"
 						+ "5");
-JOptionPane.showMessageDialog(null,"Input on Console");
+				JOptionPane.showMessageDialog(null,"Input on Console");
 				towersOfHanoi.main(null);	
 				break;
 			case "2":
